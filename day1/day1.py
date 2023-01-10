@@ -1,4 +1,4 @@
-with open('./data.txt') as file:
+with open('data.txt') as file:
     data = file.read().strip().split('\n')
 
 elfs = []
@@ -10,13 +10,17 @@ for x in data:
         nextElf = 0
     else:
         nextElf += int(x)
-
+        
 elfs.append(nextElf)
 
-elfs.sort()
-
+#sorts the list of elfs
+elfs.sort(reverse=True)
 print(elfs)
 
-result = max(elfs)
+#finds the three elfs carrying the most calories
+top3Elfs = elfs[0:3]
+print('\ntop 3 elfs:\n' + str(top3Elfs))
 
-print(result)
+#shows the result
+result = sum(top3Elfs)
+print('\nresult:\n' + str(result))
