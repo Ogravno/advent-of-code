@@ -1,4 +1,4 @@
-with open('data.txt') as file:
+with open('./data.txt') as file:
     data = file.read().strip().split('\n')
 
 elfs = []
@@ -12,6 +12,10 @@ for x in data:
         nextElf += int(x)
 
 elfs.append(nextElf)
+
+elfs.sort()
+
+print(elfs)
 
 result = max(elfs)
 
