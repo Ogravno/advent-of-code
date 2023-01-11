@@ -4,12 +4,12 @@ with open('data.txt') as file:
 elfs = []
 nextElf = 0
 
-for x in data:
-    if x == '':
+for calInItem in data:
+    if calInItem == '':
         elfs.append(nextElf)
         nextElf = 0
     else:
-        nextElf += int(x)
+        nextElf += int(calInItem)
         
 elfs.append(nextElf)
 
