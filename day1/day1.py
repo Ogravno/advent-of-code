@@ -1,10 +1,10 @@
 with open('data.txt') as file:
-    data = file.read().strip().split('\n')
+    items = file.read().strip().split('\n')
 
 elfs = []
 nextElf = 0
 
-for calInItem in data:
+for calInItem in items:
     if calInItem == '':
         elfs.append(nextElf)
         nextElf = 0

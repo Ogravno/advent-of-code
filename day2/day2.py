@@ -1,5 +1,5 @@
 with open('data.txt') as file:
-    data = file.read().strip().split('\n')
+    tournament = file.read().strip().split('\n')
 
 def findWinner(letter):
     match letter:
@@ -41,7 +41,7 @@ def findMyShape(opponentShape, result):
 
 totalPoints = 0
 
-for round in data: 
+for round in tournament: 
     opponentShape = findOpponentShape(round[0])
     result = findWinner(round[2])
     myShape = findMyShape(opponentShape, result)
