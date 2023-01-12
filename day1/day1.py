@@ -1,6 +1,6 @@
 with open('data.txt') as file:
     items = file.read().strip().split('\n')
-print(items)
+
 elfs = []
 nextElf = 0
 
