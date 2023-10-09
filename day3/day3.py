@@ -68,7 +68,7 @@ def findGroupBadge(group):
     groupBadge = ''
     potentialgroupeBadge = group[0]
 
-    for rucksack in group:
+    for rucksack in group[1:]:
         potentialgroupeBadge = findMathingItemsInTwoArrays(potentialgroupeBadge, rucksack)
 
     groupBadge = potentialgroupeBadge[0]
@@ -84,5 +84,5 @@ priorityofGroupBadges = findPriorityOfItems(groupBadges)
 
 
 
-print(f'Missplaced items: {priorityOfMisplacedItems}')
+print(f'Misplaced items: {priorityOfMisplacedItems}')
 print(f'Group badges: {priorityofGroupBadges}')
